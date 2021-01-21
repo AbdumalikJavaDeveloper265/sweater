@@ -3,6 +3,20 @@
     <title>Hello My main sheet</title>
 </head>
 <body>
-<div>Hello , {{some}} </div>
+<div>
+    <form method="post">
+        <input type="text" name="text" placeholder="Enter some text here:">
+        <input type="text" name="tag" placeholder="Enter tag name here:">
+        <button type="submit">Add</button>
+    </form>
+</div>
+<div>List off Messages</div>
+    {{#messages}}
+        <div>
+            <b>{{id}}</b>
+            <span>{{text}}</span>
+            <i>{{tag}}</i>
+        </div>
+        {{/messages}}
 </body>
 </html>
